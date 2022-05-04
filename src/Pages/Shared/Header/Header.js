@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <>
             <Navbar collapseOnSelect expand="lg" sticky='top' bg="light" variant="light">
-                <Container>
+                <Container className='text-center'>
                     <Navbar.Brand as={Link} to="/">
 
                     </Navbar.Brand>
@@ -15,7 +15,7 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
 
-                            <a className='me-lg-5' href="tel:+8801748402018">
+                            <a className='me-lg-5 mb-4 mb-lg-0' href="tel:+8801748402018">
                                 <MdAddIcCall size="24" className="nav-linker" />
                             </a>
                             <span onClick={() => window.location = 'mailto:sajeeb.web@gmail.com'}> <MdOutgoingMail size="24" className="nav-linker text-primary" /></span>

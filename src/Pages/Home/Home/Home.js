@@ -3,6 +3,8 @@ import PageTitle from '../../Shared/PageTittle/PageTitle';
 import Banner from '../Banner/Banner';
 import Inventories from '../Inventories/Inventories';
 import Inventory from '../Inventory/Inventory';
+import LatesInfo from '../Latest/LatesInfo';
+import Quotes from '../QuickQuote/Quotes';
 import Services from '../service/Services';
 
 const Home = () => {
@@ -12,6 +14,8 @@ const Home = () => {
             <Banner></Banner>
             <Inventory></Inventory>
             <Services></Services>
+            <Quotes></Quotes>
+            <LatesInfo></LatesInfo>
         </>
     );
 };

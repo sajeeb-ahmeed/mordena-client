@@ -7,3 +7,15 @@ body {
 .object-fit {
   object-fit: cover;
 }
+
+.pull-right {
+  float: right;
+  display: flex;
+  justify-items: flex-end;
+  border: 1px solid rgba(132, 129, 129, 0.315) !important;
+}
+
+.pull-right:hover {
+  background-color: #0FAF97;
+
+}

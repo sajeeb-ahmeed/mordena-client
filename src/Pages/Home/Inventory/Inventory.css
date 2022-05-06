@@ -22,6 +22,28 @@
         -9px -9px 18px #ffffff;
 }
 
+.imgCards {
+    border-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: none;
+    background: #f7f7f7;
+    box-shadow: 9px 9px 28px #ffffff,
+        -9px -9px 18px #ffffff;
+    height: 250px;
+}
+
+.cards-special {
+    border-radius: 12px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border: none;
+    background: #f7f7f7;
+    box-shadow: 9px 9px 28px #ffffff,
+        -9px -9px 18px #ffffff;
+    height: auto;
+}
+
 /* button  */
 .cta {
     position: relative;

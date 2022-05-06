@@ -8,7 +8,7 @@ const LatesInfo = () => {
     return (
         <div className='container my-5'>
             <div className="row">
-                <div className="col-sm-12 col-md-6 col-12 col-xs-12">
+                <div className="col-sm-12 col-md-6 col-12 col-xs-12 tittle-hover">
                     <h4 className='my-5 fw-bold'>WHAT MAKES US SPECIAL?</h4>
                     <Accordion defaultActiveKey="0" flush>
                         <Accordion.Item eventKey="0">
@@ -38,7 +38,7 @@ const LatesInfo = () => {
                         </Accordion.Item>
                     </Accordion>
                 </div>
-                <div className="col-sm-12 col-md-6 col-12 col-xs-12 mx-auto">
+                <div className="col-sm-12 col-md-6 col-12 col-xs-12 mx-auto tittle-hover">
                     <h4 className='my-5 fw-bold'>WHAT MAKES US SPECIAL?</h4>
                     <div className="row">
                         <div className="col-md-6 col-sm-12 col-12">
@@ -80,7 +80,7 @@ const LatesInfo = () => {
                             </Carousel>
                             <Card className='cards-special'>
                                 <Card.Body>
-                                    <Card.Title className='text-uppercase'>11 Times Old Furniture Gained New Life</Card.Title>
+                                    <Card.Title className='text-uppercase titile-card'>11 Times Old Furniture Gained New Life</Card.Title>
                                     <Card.Text>
                                         Coordinating and supervising work performed trades and outsite supplier for quality, completeness,schedule.
                                     </Card.Text>
@@ -127,7 +127,7 @@ const LatesInfo = () => {
                             </Carousel>
                             <Card className='cards-special'>
                                 <Card.Body>
-                                    <Card.Title className='text-uppercase'>How to restore old wodden furniture</Card.Title>
+                                    <Card.Title className='text-uppercase titile-card'>How to restore old wodden furniture</Card.Title>
                                     <Card.Text>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.

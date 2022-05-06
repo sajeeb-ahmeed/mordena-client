@@ -6,7 +6,7 @@ import Inventories from '../Inventories/Inventories';
 const Inventory = () => {
 
     const [services, setServices] = useState([]);
-    console.log(services);
+    // console.log(services);
     useEffect(() => {
         fetch('https://radiant-river-94662.herokuapp.com/inventory')
             .then(res => res.json())

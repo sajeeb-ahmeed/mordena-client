@@ -94,6 +94,16 @@
     background: #0FAF97;
 }
 
+
+
+.tittle-hover h1 {
+    color: #0FAF97;
+}
+
+.tittle-hover:hover .titile-card {
+    color: #0FAF97;
+}
+
 .cta:hover svg {
     transform: translateX(0);
 }

@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import auth from "../../Firebase/firebase.init";
 
 import Loading from "../../Shared/Loading/Loading";
+import PageTitle from "../../Shared/PageTittle/PageTitle";
 
 import '../Login/Login.css'
 import SocialLogin from "../SocialLogin/SocialLogin";
@@ -73,6 +74,7 @@ const SignUp = () => {
 
     return (
         <>
+            <PageTitle title="Register"></PageTitle>
             <div className="login-container">
                 <div className="login-title">Sign up</div>
                 <form className="login-form" onSubmit={handleRegister}>

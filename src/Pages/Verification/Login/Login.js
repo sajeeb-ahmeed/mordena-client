@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../Firebase/firebase.init";
+import PageTitle from "../../Shared/PageTittle/PageTitle";
 
 import SocialLogin from "../SocialLogin/SocialLogin";
 
@@ -97,7 +98,7 @@ const Login = () => {
 
     return (
         <>
-
+            <PageTitle title="Login"></PageTitle>
             <div className="  login-container">
                 <div className="login-title">LOGIN</div>
                 <form className="login-form" onSubmit={handleLogin}>

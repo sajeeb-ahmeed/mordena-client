@@ -5,6 +5,7 @@ import './SocialLogin.css';
 import { FcGoogle } from 'react-icons/fc'
 import Loading from '../../Shared/Loading/Loading';
 import auth from '../../Firebase/firebase.init';
+import PageTitle from '../../Shared/PageTittle/PageTitle';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -27,6 +28,7 @@ const SocialLogin = () => {
     }
     return (
         <div className='social_container '>
+            <PageTitle title="Social-Login"></PageTitle>
             <div className='d-flex align-items-center'>
                 <div style={{ height: '5px' }} className='bg-secondary w-50'></div>
                 <p className='mt-3 fw-bold login_or  px-2'>OR</p>

@@ -1,0 +1,72 @@
+.services-container-wrapper {
+    padding-top: 100px !important;
+    padding-bottom: 67px !important;
+    background-image: url(https://transpress.zooka.io/wp-content/uploads/2016/09/home-service-bg.png) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.fancy-icon {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    margin-bottom: 25px;
+    cursor: pointer;
+    height: 170px;
+}
+
+.services-tittle {
+    font-weight: 700;
+}
+
+.services-tittle::before {
+    content: 'OUR SERVICES';
+    border-bottom: 4px solid #0FAF97;
+    margin-top: 7px;
+
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: row;
+    color: #0a0a0a !important;
+}
+
+@media only screen and (max-width:576px) {
+    .fancy-icon {
+        display: flex;
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 25px;
+        height: auto;
+    }
+
+    .fancy-icons {
+        border-radius: 50%;
+        padding: 18px;
+        background-color: none;
+        margin-right: 18px;
+    }
+}
+
+.fancy-icons {
+    border-radius: 50%;
+    margin-right: 12px;
+    padding: 18px;
+    background-color: rgba(194, 187, 187, 0.3);
+}
+
+.fancy-icon:hover h1 {
+    background-color: #0FAF97;
+}
+
+.fancy-icon:hover h5 {
+    color: #0FAF97;
+}
+
+.services-items {
+    color: #0a0a0a;
+    font-weight: 700;
+}

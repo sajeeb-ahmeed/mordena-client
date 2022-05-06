@@ -15,10 +15,14 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
 
-                            <a className='me-lg-5 mb-4 mb-lg-0' href="tel:+8801748402018">
-                                <MdAddIcCall size="24" className="nav-linker" />
-                            </a>
-                            <span onClick={() => window.location = 'mailto:sajeeb.web@gmail.com'}> <MdOutgoingMail size="24" className="nav-linker text-primary" /></span>
+                            <div className=" flex-column">
+                                <a className='me-lg-5 mb-4 mb-lg-0 text-dark' href="tel:+8801748402018">
+                                    <MdAddIcCall size="24" className="nav-linker text-dark me-2" />
+                                    +01748402018
+                                </a>
+                                <span className='text-dark' onClick={() => window.location = 'mailto:sajeeb.web@gmail.com'}> <MdOutgoingMail size="24" className="nav-linker text-dark" />
+                                    Sajeeb.web@gmail.com</span>
+                            </div>
 
                         </Nav>
                         <Nav className='mx-auto text-center d-block'>

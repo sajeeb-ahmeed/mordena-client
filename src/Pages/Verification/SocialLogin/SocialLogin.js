@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
-
 import './SocialLogin.css';
 import { FcGoogle } from 'react-icons/fc'
 import Loading from '../../Shared/Loading/Loading';

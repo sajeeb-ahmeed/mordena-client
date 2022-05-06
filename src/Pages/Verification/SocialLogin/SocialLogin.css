@@ -1,0 +1,40 @@
+.social_container {
+    width: 350px;
+    height: auto;
+    margin: 4rem auto;
+    box-sizing: border-box;
+}
+
+/* social btn  */
+
+.social_button {
+    color: #55aef1;
+    margin-top: 20px;
+    background: #2a2a2a;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px #ffffff;
+    transition: 0.5s;
+    border: none;
+}
+
+.login_or {
+    letter-spacing: 1.5px;
+    color: #50a6e8;
+    font-weight: 700;
+}
+
+.googlefont {
+    font-size: 27px;
+}
+
+@media only screen and (max-width:496px) {
+    .social_container {
+        width: 90%;
+        overflow-x: hidden !important;
+        margin: o auto;
+    }
+}

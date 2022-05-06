@@ -14,7 +14,10 @@ const SocialLogin = () => {
 
     let errorElement;
 
-
+    if (loading) {
+        // console.log('loading component asbe shared theke');
+        return <Loading></Loading>
+    }
 
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>;

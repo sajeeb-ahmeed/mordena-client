@@ -7,6 +7,7 @@ const Home = () => {
         <>
             <PageTitle title="Home"></PageTitle>
             <Banner></Banner>
+
         </>
     );
 };

@@ -25,6 +25,7 @@ const Header = () => {
                             <img className='object-fit' height={90} width={170} src={logo} alt="" />
                         </Nav>
                         <Nav className="ms-auto">
+                            <Nav.Link as={Link} to="/">Home</Nav.Link>
                             <Nav.Link as={Link} to="about">About</Nav.Link>
 
 

@@ -99,7 +99,7 @@ const Login = () => {
     return (
         <>
             <PageTitle title="Login"></PageTitle>
-            <div className="  login-container">
+            <div className=" login-container">
                 <div className="login-title">LOGIN</div>
                 <form className="login-form" onSubmit={handleLogin}>
                     <input type="text" placeholder="Your Email" required onChange={handleEmailChange} />

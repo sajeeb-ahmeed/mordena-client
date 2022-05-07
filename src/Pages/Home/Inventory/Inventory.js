@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import '../Inventory/Inventory.css'
 import Inventories from '../Inventories/Inventories';
+import PageTitle from '../../Shared/PageTittle/PageTitle';
 
 const Inventory = () => {
 
@@ -15,6 +16,7 @@ const Inventory = () => {
 
     return (
         <div id="services" className='container my-5'>
+            <PageTitle title="Inventory"></PageTitle>
             <div className="row">
                 <h1 className=' text-center my-5'> INVENTORY</h1>
                 <div className="inventory-container">

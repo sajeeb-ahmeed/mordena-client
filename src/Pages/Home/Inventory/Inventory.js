@@ -14,9 +14,9 @@ const Inventory = () => {
     }, [])
 
     return (
-        <div id="services" className='container'>
+        <div id="services" className='container my-5'>
             <div className="row">
-                <h1 className='text-primary text-center mt-5'> INVENTORY</h1>
+                <h1 className=' text-center my-5'> INVENTORY</h1>
                 <div className="inventory-container">
                     {
                         services.map(service => <Inventories key={service._id}

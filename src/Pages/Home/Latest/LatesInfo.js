@@ -6,7 +6,7 @@ import { FaTruckLoading, FaGlobeEurope } from 'react-icons/fa';
 
 const LatesInfo = () => {
     return (
-        <div className='container my-5'>
+        <div className='container my-5 py-5'>
             <div className="row">
                 <div className="col-sm-12 col-md-6 col-12 col-xs-12 tittle-hover">
                     <h4 className='my-5 fw-bold'>WHAT MAKES US SPECIAL?</h4>

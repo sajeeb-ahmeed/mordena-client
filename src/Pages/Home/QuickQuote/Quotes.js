@@ -2,7 +2,7 @@ import React from 'react';
 
 const Quotes = () => {
     return (
-        <div className='container'>
+        <div className='container my-5 py-5'>
             <div className="row">
                 <div className="col-md-6 col-12">
                     <img src={`https://transpress.zooka.io/wp-content/uploads/2016/09/home2-quote-bg.jpg`} className="img-fluid object-fit" alt="" />

@@ -14,9 +14,11 @@
 .brands-heading {
     text-transform: uppercase;
     font-weight: 600;
-    letter-spacing: 5%;
+    letter-spacing: 10%;
     line-height: 1.2;
     margin: 16px 0;
+    font-style: italic;
+    color: rgb(64, 45, 81);
 }
 
 .brand {

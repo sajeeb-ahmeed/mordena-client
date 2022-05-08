@@ -54,6 +54,15 @@
     background: none;
 }
 
+.cta4 {
+    position: relative;
+    margin: auto;
+    padding: 5px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+}
+
 .cta:before {
     content: "";
     position: absolute;

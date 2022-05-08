@@ -3,11 +3,12 @@ import { Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const Inventories = ({ service }) => {
-    const { _id, name, img, description, price, Quantity, Supplier } = service;
+    const { _id, name, img, description, price, quantity, supplier } = service;
     const navigate = useNavigate();
 
     const navigateToServiceDetail = id => {
-        navigate(`/inventory/${id}`);
+        navigate(`/update/${_id}`);
+
     }
 
 
@@ -18,16 +19,16 @@ const Inventories = ({ service }) => {
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
-                        {Supplier}
+                        {supplier}
                     </Card.Text>
                     <Card.Text>
-                        {description.slice(0, 115)} <a href="https://radiant-river-94662.herokuapp.com/inventory"> Read more..</a>
+                        {description.slice(0, 115)} <a href=' '> Read more..</a>
                     </Card.Text>
                     <Card.Text>
                         ${price}
                     </Card.Text>
                     <Card.Text>
-                        Current Stock : {Quantity}
+                        Current Stock : {quantity}
                     </Card.Text>
 
                     <button className="cta" onClick={() => navigateToServiceDetail(_id)}>

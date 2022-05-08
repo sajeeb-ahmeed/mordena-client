@@ -1,30 +1,28 @@
 import React, { useEffect, useState } from 'react';
-
-import '../Inventory/Inventory.css'
-import Inventories from '../Inventories/Inventories';
+import UseInventory from '../../../Hooks/UseInventory';
 import PageTitle from '../../Shared/PageTittle/PageTitle';
+import ManageAllInventory from './ManageAllInventory';
 
-const Inventory = () => {
-
+const AllInventory = () => {
     const [services, setServices] = useState([]);
     // console.log(services);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('http://localhost:5000/service')
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])
 
     return (
         <div id="services" className='container my-5'>
-            <PageTitle title="Inventory"></PageTitle>
+            <PageTitle title="All-Inventory"></PageTitle>
             <div className="row">
-                <h1 className=' text-center my-5'> INVENTORY</h1>
+                <h1 className=' text-center my-5'> ALL INVENTORIES</h1>
                 <div className="inventory-container">
                     {
-                        services.map(service => <Inventories key={service._id}
+                        services.map(service => <ManageAllInventory key={service._id}
                             service={service}>
 
-                        </Inventories>
+                        </ManageAllInventory>
 
 
                         )
@@ -35,4 +33,4 @@ const Inventory = () => {
     );
 };
 
-export default Inventory;
+export default AllInventory;

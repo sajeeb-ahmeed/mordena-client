@@ -3,6 +3,7 @@ import { Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const Inventories = ({ service }) => {
+
     const { _id, name, img, description, price, quantity, supplier } = service;
     const navigate = useNavigate();
 

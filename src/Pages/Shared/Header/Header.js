@@ -26,14 +26,16 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
 
-                            <div className=" flex-column">
-                                <a className='me-lg-5 mb-4 mb-lg-0 text-light' href="tel:+8801748402018">
-                                    <MdAddIcCall size="24" className="nav-linker text-light me-2" />
-                                    +01748402018
-                                </a>
-                                <span className='text-light' onClick={() => window.location = 'mailto:sajeeb.web@gmail.com'}> <MdOutgoingMail size="24" className="nav-linker text-light" />
-                                    Sajeeb.web@gmail.com</span>
-                            </div>
+
+                            <a className='me-lg-5 mb-4 mb-lg-0 ' href="tel:+8801748402018">
+                                <MdAddIcCall size="24" className="nav-linker  me-2" />
+
+                            </a>
+                            <a href=" ">
+                                <span className='text-primary' onClick={() => window.location = 'mailto:sajeeb.web@gmail.com'}> <MdOutgoingMail size="24" className="nav-linker " />
+                                </span>
+                            </a>
+
 
                         </Nav>
                         <Nav className='mx-auto text-center d-block'>
@@ -44,12 +46,13 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="about">About</Nav.Link>
+                            <Nav.Link as={Link} to="/about">About</Nav.Link>
                             {
                                 user && <>
-                                    <Nav.Link as={Link} to="addservice">Add</Nav.Link>
-                                    <Nav.Link as={Link} to="/ManageInventory">Manage</Nav.Link>
-                                    <Nav.Link as={Link} to="orders">Orders</Nav.Link>
+                                    <Nav.Link as={Link} to="/add">Add Items</Nav.Link>
+                                    <Nav.Link as={Link} to="/ManageInventory">Manage Items</Nav.Link>
+                                    <Nav.Link as={Link} to="/add">My Items</Nav.Link>
+
                                 </>
                             }
                             {

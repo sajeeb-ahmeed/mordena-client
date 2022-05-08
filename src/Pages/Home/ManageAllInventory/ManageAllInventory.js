@@ -1,39 +1,69 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import useServices from '../../../Hooks/UseServices';
+import Manage from './Manage';
 
-const ManageAllInventory = ({ service }) => {
-    console.log(service);
+const ManageAllInventory = () => {
 
-    const { name, img, description, price, Quantity, Supplier } = service;
+    const { services, setServices } = useServices();
+    const handleUserDelate = id => {
+        console.log('object', id);
+        const proceed = window.confirm("Are You Sure Want To Delate!!")
+        if (proceed) {
 
+            const url = `http://localhost:5000/delete/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => console.log('hello', data))
+            const updateService = services.filter(service => service._id !== id);
+            setServices(updateService);
+            toast.success('Items Delate Successful')
+            // console.log(updateService);
+            // console.log(services);
+        }
+    }
     return (
-        <div className='service'>
-            <Card className='cards'>
-                <Card.Img className='img-fluid imgs cards' variant="top" src={img} />
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>
-                        {Supplier}
-                    </Card.Text>
-                    <Card.Text>
-                        {description.slice(0, 115)} <a href="https://radiant-river-94662.herokuapp.com/inventory"> Read more..</a>
-                    </Card.Text>
-                    <Card.Text>
-                        ${price}
-                    </Card.Text>
-                    <Card.Text>
-                        Current Stock : {Quantity}
-                    </Card.Text>
+        <div className='container-fluid mx-auto '>
 
-                    {/* <button className="cta" >
-                    <span>Manage Stock</span>
+            <h6 className='text-center my-5'>
+                <Link to={'/add'}><button className='cta' >
+                    <span>Add New Item</span>
                     <svg viewBox="0 0 13 10" height="10px" width="15px">
                         <path d="M1,5 L11,5"></path>
                         <polyline points="8 1 12 5 8 9"></polyline>
                     </svg>
-                </button> */}
-                </Card.Body>
-            </Card>
+                </button></Link>
+            </h6>
+
+            <div className="container mx-auto my-4" >
+                <Table striped bordered hover variant="dark" responsive>
+                    <thead>
+                        <tr>
+                            <th>Inventory Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Supplier </th>
+                            <th>Edit / Update</th>
+
+                        </tr>
+                    </thead>
+                    <tbody className='py-5'>
+                        {
+                            services.map(service => <Manage
+                                key={service._id}
+                                service={service}
+                                handleUserDelate={handleUserDelate}
+                            ></Manage>)
+                        }
+                    </tbody>
+                </Table>
+
+            </div>
+
         </div>
     );
 };

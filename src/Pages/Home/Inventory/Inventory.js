@@ -7,6 +7,7 @@ import PageTitle from '../../Shared/PageTittle/PageTitle';
 const Inventory = () => {
 
     const [services, setServices] = useState([]);
+    const newServices = services.slice(0, 6)
     // console.log(services);
     useEffect(() => {
         fetch('http://localhost:5000/services')
@@ -21,7 +22,7 @@ const Inventory = () => {
                 <h1 className=' text-center my-5'> INVENTORY</h1>
                 <div className="inventory-container">
                     {
-                        services.map(service => <Inventories key={service._id}
+                        newServices.map(service => <Inventories key={service._id}
                             service={service}>
 
                         </Inventories>

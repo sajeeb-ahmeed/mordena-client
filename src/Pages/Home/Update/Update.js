@@ -8,10 +8,10 @@ const Update = () => {
     // console.log(user);
     const [isReload, setIsReload] = useState(false);
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${id}`)
+        fetch(`https://radiant-river-94662.herokuapp.com/service/${id}`)
             .then(res => res.json())
             .then(data => setUser(data))
-    }, [isReload]);
+    }, [isReload, id]);
 
     const handleUpdateQuantity = e => {
         e.preventDefault();
@@ -20,9 +20,9 @@ const Update = () => {
         const newQuantity = parseInt(quantity) + parseInt(user?.quantity)
         const updateQuantity = { newQuantity: newQuantity }
 
-        const url = `http://localhost:5000/service/${id}`
+        const url = `https://radiant-river-94662.herokuapp.com/service/${id}`
         if (!quantity) {
-            alert('Please add some quantity')
+            toast.error('Please add some quantity', { id: 'error' })
         } else {
             fetch(url, {
                 method: 'PUT',
@@ -36,14 +36,14 @@ const Update = () => {
                     console.log(data);
                     setIsReload(!isReload);
                     e.target.reset();
-                    toast.success("Stock add Successful");
+                    toast.success("Stock add Successful", { id: 'success' });
                 });
         }
     };
     const handleDeliveryProduct = (id) => {
         const quantity = user?.quantity;
         const updateQuantity = { quantity };
-        const url = `http://localhost:5000/delivery/${id}`
+        const url = `https://radiant-river-94662.herokuapp.com/delivery/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -55,7 +55,7 @@ const Update = () => {
             .then(data => {
                 console.log(data);
                 setIsReload(!isReload);
-                toast.success('Delivery Successful')
+                toast.success('Delivery Successful', { id: 'success' })
             })
     }
 
@@ -97,10 +97,10 @@ const Update = () => {
                     <div>
 
                         <form onSubmit={handleUpdateQuantity}>
-                            <input className='cards p-2 me-2' type="text" name='quantity' placeholder='Add Quantity?' />
+                            <input className='cards p-2 me-2 mb-3' type="text" name='quantity' placeholder='Add Quantity?' />
                             <button className='cta cta4'>
                                 <span>
-                                    <input className='cta4' type="submit" value="Add quantity" />
+                                    <input className='cta4 fw-bold' type="submit" value="Add quantity" />
                                 </span>
                                 <svg viewBox="0 0 13 10" height="10px" width="15px">
                                     <path d="M1,5 L11,5"></path>

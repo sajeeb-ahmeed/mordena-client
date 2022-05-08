@@ -27,12 +27,12 @@ const Header = () => {
                         <Nav className="me-auto">
 
 
-                            <a className='me-lg-5 mb-4 mb-lg-0 ' href="tel:+8801748402018">
+                            <a className='me-lg-5 mb-4 mb-lg-0 text-light' href="tel:+8801748402018">
                                 <MdAddIcCall size="24" className="nav-linker  me-2" />
 
                             </a>
                             <a href=" ">
-                                <span className='text-primary' onClick={() => window.location = 'mailto:sajeeb.web@gmail.com'}> <MdOutgoingMail size="24" className="nav-linker " />
+                                <span className='text-light' onClick={() => window.location = 'mailto:sajeeb.web@gmail.com'}> <MdOutgoingMail size="24" className="nav-linker " />
                                 </span>
                             </a>
 

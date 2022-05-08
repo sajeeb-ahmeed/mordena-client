@@ -17,11 +17,11 @@ const Additem = () => {
             description: e.target.description.value,
             img: e.target.img.value
         }
-        axios.post("http://localhost:5000/add", items)
+        axios.post("https://radiant-river-94662.herokuapp.com/add", items)
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {
-                    toast('Your order is booked!!!');
+                    toast.success('New Items added successfully!!!', { id: 'success' });
                     e.target.reset();
                 }
             })

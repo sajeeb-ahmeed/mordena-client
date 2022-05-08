@@ -4,7 +4,7 @@ const UseInventory = () => {
     const [service, setService] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/service`;
+        const url = `https://radiant-river-94662.herokuapp.com/service`;
         console.log(url);
         fetch(url)
             .then(res => res.json())

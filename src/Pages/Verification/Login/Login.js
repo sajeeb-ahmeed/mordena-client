@@ -5,7 +5,6 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../Firebase/firebase.init";
 import PageTitle from "../../Shared/PageTittle/PageTitle";
-
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 import './Login.css'
@@ -50,6 +49,8 @@ const Login = () => {
         }
 
     }
+
+
     // login 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -60,10 +61,11 @@ const Login = () => {
     const resetPassword = async () => {
         if (userInfo.email) {
             await sendPasswordResetEmail();
-            toast.success('Sent Reset Password Emial')
+            toast.success('Sent Reset Password Emial', { id: 'success' });
+
         }
         else {
-            toast.error('Please Input Your Email ')
+            toast.error('Please Input Your Email ', { id: 'error' })
         }
 
     }
@@ -83,14 +85,14 @@ const Login = () => {
         if (error) {
             switch (error) {
                 case "auth/invalid-email":
-                    toast.error("Invalid email provided, please provide a valid email");
+                    toast.error("Invalid email provided, please provide a valid email", { id: 'error' });
                     break;
 
                 case "auth/invalid-password":
-                    toast.error("Wrong password!!")
+                    toast.error("Wrong password!!", { id: 'error' })
                     break;
                 default:
-                    toast("something went wrong , please try again")
+                    toast("something went wrong , please try again", { id: 'error' })
             }
         }
 
@@ -98,6 +100,7 @@ const Login = () => {
 
     return (
         <>
+
             <PageTitle title="Login"></PageTitle>
             <div className=" login-container">
                 <div className="login-title">LOGIN</div>

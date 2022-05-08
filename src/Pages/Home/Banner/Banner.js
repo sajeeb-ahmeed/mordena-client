@@ -1,17 +1,21 @@
 import React from 'react';
-import bannerimg from '../../../images/Best-Furniture-Hatil.jpg'
+import bannerimg from '../../../images/banner.jpg'
 const Banner = () => {
     return (
-        <div className='container-fluid'>
+        <div className='container-fluid my-5 pt-lg-3'>
             <div className="row text-center">
                 <div className="col-md-5 col-sm-12 col-12 d-flex justify-content-center align-items-center ">
                     <div className=' my-2'>
                         <h2 className='mb-lg-2'>Let your living space live up to your expectations.</h2>
-                        <p className='mt-2 btn btn-danger' >Explore Now</p>
+                        <button className='mt-2 cta' > <span>Explore Now</span>
+                            <svg viewBox="0 0 13 10" height="10px" width="15px">
+                                <path d="M1,5 L11,5"></path>
+                                <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg></button>
                     </div>
                 </div>
                 <div className="col-md-7 col-sm-12 col-12">
-                    <img className='img-fluid object-fit' src={bannerimg} alt="Banner - img " />
+                    <img className='img-fluid object-fit' src={`https://i.ibb.co/ckMGqLq/banner.jpg`} alt="Banner - img " />
                 </div>
             </div>
         </div>

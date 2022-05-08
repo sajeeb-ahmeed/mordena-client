@@ -7,7 +7,7 @@ const AllInventory = () => {
     const [services, setServices] = useState([]);
     // console.log(services);
     useEffect(() => {
-        fetch('http://localhost:5000/service')
+        fetch('https://radiant-river-94662.herokuapp.com/service')
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])

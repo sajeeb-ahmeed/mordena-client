@@ -17,6 +17,7 @@ import Additem from './Pages/Home/ManageAllInventory/Additems/Additem';
 import MyItems from './Pages/Home/ManageAllInventory/MyItems/MyItems';
 import { ToastContainer } from 'react-toastify';
 import Blogs from './Pages/Blogs/Blogs';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (

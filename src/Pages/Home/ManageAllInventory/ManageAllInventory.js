@@ -13,7 +13,7 @@ const ManageAllInventory = () => {
         const proceed = window.confirm("Are You Sure Want To Delate!!")
         if (proceed) {
 
-            const url = `http://localhost:5000/delete/${id}`
+            const url = `https://radiant-river-94662.herokuapp.com/delete/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
@@ -21,10 +21,11 @@ const ManageAllInventory = () => {
                 .then(data => console.log('hello', data))
             const updateService = services.filter(service => service._id !== id);
             setServices(updateService);
-            toast.success('Items Delate Successful')
+            toast.success('Items Delated Successful', { id: 'success' })
             // console.log(updateService);
             // console.log(services);
         }
+
     }
     return (
         <div className='container-fluid mx-auto '>

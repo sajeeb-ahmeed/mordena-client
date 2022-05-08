@@ -25,7 +25,7 @@ const Items = ({ item }) => {
     }
     const { name, price, img, quantity } = item;
     return (
-        <div className="">
+        <div className="container">
             <img className="  mx-auto" src={img} alt="" />
             <div className="p-5">
                 <h5 className="mb-2 ">{name}</h5>

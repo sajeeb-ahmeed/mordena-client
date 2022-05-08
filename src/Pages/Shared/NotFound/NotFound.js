@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PageTitle from '../PageTittle/PageTitle';
 
 
 const NotFound = () => {
     return (
         <div>
+            <PageTitle title="Error Page NotFound"></PageTitle>
             <section className=' container-fluid p-lg-5 notfound text-light bg-notfound '>
                 <div className='row justify-content-center  align-items-center'>
                     <div className='col-md-5 '>

@@ -1,10 +1,12 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
+import PageTitle from '../Shared/PageTittle/PageTitle';
 
 import './Blog.css'
 const Blogs = () => {
     return (
         <div className='container my-5  '>
+            <PageTitle title="Blogs"></PageTitle>
             <h3 className='mb-5 text-center'>My Blogs </h3>
             <Accordion>
                 <Accordion.Item eventKey="0">

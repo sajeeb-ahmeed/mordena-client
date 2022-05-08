@@ -17,7 +17,7 @@ const Inventory = () => {
 
     return (
         <div id="services" className='container my-5'>
-            <PageTitle title="Inventory"></PageTitle>
+            {/* <PageTitle title="Inventory"></PageTitle> */}
             <div className="row">
                 <h2 className='inventory1 text-center my-5'> INVENTORY</h2>
                 <div className="inventory-container">

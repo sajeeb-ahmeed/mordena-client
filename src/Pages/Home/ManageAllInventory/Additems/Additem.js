@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../../Firebase/firebase.init';
 
 const Additem = () => {
@@ -18,8 +19,11 @@ const Additem = () => {
         }
         axios.post("http://localhost:5000/add", items)
             .then(response => {
-                console.log(response);
-                e.target.reset();
+                const { data } = response;
+                if (data.insertedId) {
+                    toast('Your order is booked!!!');
+                    e.target.reset();
+                }
             })
     }
     return (

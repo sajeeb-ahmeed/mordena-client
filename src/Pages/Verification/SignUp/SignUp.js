@@ -1,6 +1,6 @@
 
 import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateProfile } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../Firebase/firebase.init";
@@ -12,6 +12,7 @@ import '../Login/Login.css'
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const SignUp = () => {
+
     const [sendEmailVerification, sending,] = useSendEmailVerification(auth);
     const [
         createUserWithEmailAndPassword,
@@ -22,6 +23,8 @@ const SignUp = () => {
     const [updateProfile, updating] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/";
 
     // navigate to login 
     const navigateLogin = () => {
@@ -36,8 +39,8 @@ const SignUp = () => {
         // console.log('error', error);
     }
     if (user) {
-        // toast.success('Successfully created');
-        navigate('/home');
+        navigate(from, { replace: true });
+        toast.success('Successfully created');
     }
     // email verification 
     const emailVerification = async () => {
@@ -63,7 +66,7 @@ const SignUp = () => {
             toast.success(' Account Create Successfully !', { id: "success" })
             await updateProfile({ displayName: name });
             // console.log('Successfully created');
-            navigate('/home');
+            navigate(from, { replace: true });
         }
         else {
             return toast.error('password mismactched', { id: "wrong password" })

@@ -46,12 +46,12 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="/about">About</Nav.Link>
+                            <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
                             {
                                 user && <>
                                     <Nav.Link as={Link} to="/add">Add Items</Nav.Link>
                                     <Nav.Link as={Link} to="/ManageInventory">Manage Items</Nav.Link>
-                                    <Nav.Link as={Link} to="/add">My Items</Nav.Link>
+                                    <Nav.Link as={Link} to="/myitems">My Items</Nav.Link>
 
                                 </>
                             }
@@ -59,7 +59,7 @@ const Header = () => {
                                 user ?
                                     <>
                                         <Nav.Link onClick={handleSignOut}> Log Out</Nav.Link>
-                                        {/* <img className='text-center' style={{ width: '40px', height: "40px", borderRadius: "50%", marginLeft: "5px" }} a src={user?.photoURL} alt="User" /> */}
+                                        {/* <img className='text-center d-lg-block d-none' img="true" style={{ width: '40px', height: "40px", borderRadius: "50%", marginLeft: "5px" }} a src={user?.photoURL} alt="User" /> */}
 
                                     </>
                                     :

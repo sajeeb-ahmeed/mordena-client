@@ -52,5 +52,59 @@
         "supplier": " Istarq Furniture",
         "sold": 32,
         "img": "https://hatil.com/sites/default/files/Angelina-179.jpg"
+    },
+    {
+        "name": "Monaco-204",
+        "price": "895",
+        "description": "Monaco is not just a sofa, it’s a contemporary furniture statement. This U-shaped upholstery sofa by Hatil caters to the style choice of urban, up-to-the-minute furniture enthusiasts. The engineered wooden base complements the cushioning and together the sofa gets a graceful outlook.",
+        "quantity": "27",
+        "supplier": " Sanju Furniture",
+        "sold": 32,
+        "img": "https://hatil.com/sites/default/files/styles/hatil_product_list_crop/public/Monaco-204_0.jpg"
+    },
+    {
+        "name": "Houston-111",
+        "price": "705",
+        "description": "Monaco is not just a sofa, it’s a contemporary furniture statement. This U-shaped upholstery sofa by Hatil caters to the style choice of urban, up-to-the-minute furniture enthusiasts. The engineered wooden base complements the cushioning and together the sofa gets a graceful outlook.",
+        "quantity": "27",
+        "supplier": " Sanju Furniture",
+        "sold": 32,
+        "img": "https://hatil.com/sites/default/files/styles/hatil_product_list_crop/public/Houston-111.jpg"
+    },
+    {
+        "name": "Monstart -111",
+        "price": "1905",
+        "description": "Monaco is not just a sofa, it’s a contemporary furniture statement. This U-shaped upholstery sofa by Hatil caters to the style choice of urban, up-to-the-minute furniture enthusiasts. The engineered wooden base complements the cushioning and together the sofa gets a graceful outlook.",
+        "quantity": "27",
+        "supplier": " Sanju Furniture",
+        "sold": 32,
+        "img": "https://hatil.com/sites/default/files/styles/hatil_product_list_crop/public/Manchester-326%20Sofa-Sofa%20Price-New%20Design%20Sofa-Low%20Price%20Sofa-Living%20Room%20Furniture-Modern%20Sofa.jpg"
+    },
+    {
+        "name": "Wegener-280",
+        "price": "1905",
+        "description": "Monaco is not just a sofa, it’s a contemporary furniture statement. This U-shaped upholstery sofa by Hatil caters to the style choice of urban, up-to-the-minute furniture enthusiasts. The engineered wooden base complements the cushioning and together the sofa gets a graceful outlook.",
+        "quantity": "27",
+        "supplier": " Sanju Furniture",
+        "sold": 32,
+        "img": "https://hatil.com/sites/default/files/styles/hatil_product_list_crop/public/Salamander-244%20.jpg"
+    },
+    {
+        "name": "Tranggle-280",
+        "price": "905",
+        "description": "Monaco is not just a sofa, it’s a contemporary furniture statement. This U-shaped upholstery sofa by Hatil caters to the style choice of urban, up-to-the-minute furniture enthusiasts. The engineered wooden base complements the cushioning and together the sofa gets a graceful outlook.",
+        "quantity": "27",
+        "supplier": " Sanju Furniture",
+        "sold": 32,
+        "img": "https://hatil.com/sites/default/files/styles/hatil_product_list_crop/public/Tangled-314.jpg"
+    },
+    {
+        "name": "Nebraska-119",
+        "price": "1105",
+        "description": "Monaco is not just a sofa, it’s a contemporary furniture statement. This U-shaped upholstery sofa by Hatil caters to the style choice of urban, up-to-the-minute furniture enthusiasts. The engineered wooden base complements the cushioning and together the sofa gets a graceful outlook.",
+        "quantity": "27",
+        "supplier": " Sanju Furniture",
+        "sold": 32,
+        "img": "https://hatil.com/sites/default/files/styles/hatil_product_list_crop/public/Nebraska-119_3.jpg"
     }
 ]

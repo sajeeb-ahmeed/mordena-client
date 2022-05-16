@@ -15,7 +15,7 @@ const Footers = () => {
                 <div className="footer-container">
                     <div className="footer_col_1">
 
-                        <a href=" " className="footer_logo text-heading-18 text-foot"> <FcSportsMode className='icon-foot'></FcSportsMode> Moderno  </a>
+                        <a href=" " className="footer_logo text-heading-18 text-foot"> <FcSportsMode className='icon-foot'></FcSportsMode> Modernia  </a>
                         <p className="text-paragraph-16">Moderno ensures the best user interface as well as user experience so your customers will love you from the first sight.</p>
                         <ul className="footer_icons">
                             <li>  <BsTwitter></BsTwitter> </li>
@@ -58,7 +58,7 @@ const Footers = () => {
                     </div>
                 </div>
                 {/* <hr className="footer_hr" /> */}
-                <p className="text-heading-16 text-center"> &copy; {year} Moderno All right reserved</p>
+                <p className="text-heading-16 text-center"> &copy; {year} Modernia All right reserved</p>
             </div>
         </div>
     );

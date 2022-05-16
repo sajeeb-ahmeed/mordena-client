@@ -1,40 +1,31 @@
 import React from 'react';
-import toast from 'react-hot-toast';
-import useServices from '../../../../Hooks/UseServices';
 
-const Items = ({ item }) => {
-    const { services, setServices } = useServices();
-    const handleUserDelate = id => {
-        console.log('object', id);
-        const proceed = window.confirm("Are You Sure Want To Delate!!")
-        if (proceed) {
 
-            const url = `https://radiant-river-94662.herokuapp.com/delete/${id}`
-            fetch(url, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => console.log('hello', data))
-            const updateService = services.filter(service => service._id !== id);
-            setServices(updateService);
-            toast.success('Items Delated Successful', { id: 'success' })
-            // console.log(updateService);
-            // console.log(services);
-        }
-
-    }
-    const { name, price, img, quantity } = item;
+const Items = ({ item, handleDeleteBtn }) => {
+    const { _id, name, price, img, quantity, description, supplier } = item;
+    // const handleDeleteBtn = props.handleDeleteBtn;
     return (
-        <div className="container">
-            <img className="  mx-auto" src={img} alt="" />
-            <div className="p-5">
-                <h5 className="mb-2 ">{name}</h5>
-                <p style={{ color: '#494949' }} className="mb-3 ">Price: ${price}</p>
-                <p style={{ color: '#494949' }} className="mb-3 "><span className='font-bold'>In-Stock:</span> {quantity}</p>
-                <button className="cta cta9  " onClick={() => handleUserDelate(item._id)}>
-                    <span>Delete</span>
-                </button>
+        <div className='container my-5 '>
+            <div className="p-3 border g-2">
+
+                <div className="text-center">
+                    <img height={240} width={220} className='img-fluid cards ' src={img} alt="" />
+                    <p>  <span className='text-info fw-bold'>{_id}</span></p>
+                </div>
+                <div className="text-center">
+                    <p className=' p-1 fw-bold cards4 px-lg-3 mb-2 '>{name}</p> <br />
+                    <span className='  py-2 p-1 fw-bold'>Supplier: {supplier}</span> <br />
+                    <span className=' p-1'>Quantity: {quantity}</span> <br />
+                    <span className=' py-2 p-1'>Price: $ {price}</span> <br />
+                    <small className=' p-1'> {description?.slice(0, 70) + '..'}</small> <br />
+                    <button className="cta cta8 my-2 " onClick={() => handleDeleteBtn(_id)}>
+                        <span className='text-danger fw-bold'>Delete</span>
+                    </button>
+                </div>
+
+
             </div>
+
         </div>
     );
 };

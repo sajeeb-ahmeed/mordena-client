@@ -1,46 +1,60 @@
-import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import axiosPrivate from '../../../../api/axiosPrivate';
+import useServices from '../../../../Hooks/UseServices';
 import auth from '../../../Firebase/firebase.init';
+
 import Items from '../Items/Items';
 
+
 const MyItems = () => {
-    const [user] = useAuthState(auth)
-    const [addItems, setAddItems] = useState([]);
-    // console.log(addItems);
-    const navigate = useNavigate();
+    const [user] = useAuthState(auth);
+    const [ownItems, setOwnItems] = useState([]);
+    const { services, setServices } = useServices();
+
+
     useEffect(() => {
-        const getItems = async () => {
-            const email = user.email;
-            const url = `https://radiant-river-94662.herokuapp.com/add?email=${email}`
-            try {
-                const { data } = await axiosPrivate.get(url);
-                setAddItems(data);
-            }
-            catch (error) {
-                if (error.response.status === 401 || error.response.status === 403) {
-                    signOut(auth);
-                    navigate('/signin');
-                    toast.error(error?.message, { id: 'error' })
-                }
-            }
+        fetch('https://radiant-river-94662.herokuapp.com/services')
+            .then(res => res.json())
+            .then(data => setOwnItems(data))
+
+    }, [ownItems]);
+
+    const handleUserDelate = id => {
+        console.log('object', id);
+        const proceed = window.confirm("Are You Sure Want To Delate!!")
+        if (proceed) {
+
+            const url = `https://radiant-river-94662.herokuapp.com/delete/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => console.log('hello', data))
+            const updateService = services.filter(service => service._id !== id);
+            setServices(updateService);
+            toast.success('Items Delated Successful', { id: 'success' })
+            // console.log(updateService);
+            // console.log(services);
         }
-        getItems();
-    }, [user]);
-    console.log(addItems);
+
+    }
+    const email = user.email;
+    const rest = ownItems.filter(ownItem => ownItem.email === email);
+
+
     return (
-        <div className='my-5'>
-            <h1 className=' text-center'>Items: {addItems.length}</h1>
-            <h1 className=' text-center'>User Name: {user.displayName}</h1>
-            <h1 className=' text-center'>User Email: {user.email}</h1>
-            <div className=' mt-5'>
-                {
-                    addItems.map(item => <Items item={item} key={item._id}></Items>)
-                }
-            </div>
+        <div className='inventory-container2 mx-auto'>
+            {
+                rest.map(item => <Items
+                    key={item._id}
+                    item={item}
+                    handleDeleteBtn={handleUserDelate}>
+
+                </Items>
+
+                )
+            }
         </div>
     );
 };

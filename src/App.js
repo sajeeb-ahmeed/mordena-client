@@ -18,6 +18,7 @@ import MyItems from './Pages/Home/ManageAllInventory/MyItems/MyItems';
 import { ToastContainer } from 'react-toastify';
 import Blogs from './Pages/Blogs/Blogs';
 import 'react-toastify/dist/ReactToastify.css';
+import SocialLogin from './Pages/Verification/SocialLogin/SocialLogin';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <ManageAllInventory></ManageAllInventory></RequireAuth>}></Route>
         <Route path='/myitems' element={<RequireAuth><MyItems></MyItems></RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/sociallogin' element={<SocialLogin></SocialLogin>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

@@ -39,7 +39,7 @@ const LatesInfo = () => {
                     </Accordion>
                 </div>
                 <div className="col-sm-12 col-md-6 col-12 col-xs-12 mx-auto tittle-hover">
-                    <h4 className='my-5 fw-bold'>WHAT MAKES US SPECIAL?</h4>
+                    <h4 className='my-5 fw-bold'>WHAT SERVICES SPECIAL?</h4>
                     <div className="row">
                         <div className="col-md-6 col-sm-12 col-12">
                             <Carousel className='cards'>
@@ -82,7 +82,7 @@ const LatesInfo = () => {
                                 <Card.Body>
                                     <Card.Title className='text-uppercase titile-card'>11 Times Old Furniture Gained New Life</Card.Title>
                                     <Card.Text>
-                                        Coordinating and supervising work performed trades and outsite supplier for quality, completeness,schedule.
+                                        Coordinating and supervising work performed trades and outsite supplier for quality.
                                     </Card.Text>
                                 </Card.Body>
                             </Card>

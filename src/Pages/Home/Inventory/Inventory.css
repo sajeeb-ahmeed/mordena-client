@@ -5,6 +5,13 @@
     overflow-x: hidden;
 }
 
+.inventory-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    overflow-x: hidden;
+}
+
 .cards {
     border-radius: 34px;
     border: none;
@@ -18,6 +25,15 @@
     border: none;
     background: #f7f7f7;
     box-shadow: 9px 9px 28px #151f317e, -9px -9px 18px #02020462;
+}
+
+.cards4 {
+    border-radius: 9px;
+    padding: 10px;
+    border: none;
+    color: #234567;
+    background: #fffefee3;
+    box-shadow: 9px 9px 28px #05060800, -9px -9px 18px #04040462;
 }
 
 .cards2 {
@@ -59,6 +75,7 @@
     transition: all 0.2s ease;
     border: none;
     background: none;
+    text-decoration: none !important;
 }
 
 .cta4 {
@@ -78,6 +95,37 @@
     display: block;
     border-radius: 50px;
     background: #37bfabb8;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+
+nav a {
+    /* font-weight: 400 !important; */
+    color: #0FAF97 !important;
+}
+
+nav a:hover {
+    color: #112421b8 !important;
+}
+
+.color-2 {
+    color: #0FAF97 !important;
+}
+
+.color-2:hover {
+    color: #112421b8 !important;
+}
+
+.cta2:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #c7efe9f1;
     width: 45px;
     height: 45px;
     transition: all 0.3s ease;
@@ -189,6 +237,12 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .inventory-container2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
     .flex {
         display: block;
         text-align: center;
@@ -199,5 +253,11 @@
 @media only screen and (min-width: 577px) and (max-width: 992px) {
     .inventory-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .inventory-container2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
     }
 }
